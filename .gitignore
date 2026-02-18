@@ -1,0 +1,87 @@
+# Created by https://www.toptal.com/developers/gitignore/api/django,python,docker,virtualenv
+# Editor: VS Code / PyCharm
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Если собираешь статику (CSS/JS) локально
+staticfiles/
+static/
+
+### Python ###
+# файлы компиляции
+*.py[cod]
+*.so
+.Python
+
+# Распространенные папки с виртуальным окружением
+# (для Docker они не нужны, т.к. образ ставит зависимости сам)
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# pip freeze вывод
+*.egg-info/
+*.egg
+dist/
+build/
+
+### Virtual Environment ###
+# Папки виртуального окружения (их точно не надо пушить)
+venv
+env
+.env
+.venv
+ENV
+
+### Django ###
+# Локальные настройки, которых нет в репозитории
+*.local.py
+
+### PyCharm (IDE) ###
+.idea/
+*.iml
+*.iws
+out/
+.DS_Store
+
+### Visual Studio Code (IDE) ###
+.vscode/
+*.code-workspace
+.history/
+
+### Docker ###
+# Не игнорируем сам docker-compose.yml и Dockerfile, но игнорируем временные файлы докера
+.dockerignore
+docker-compose.override.yml
+
+### Environment variables ###
+# САМОЕ ВАЖНОЕ: Файл с секретами НЕ ДОЛЖЕН попасть в git
+.env
+.env.local
+.env.production
+.flaskenv
+
+### Project specific ###
+# Если используешь allure для отчетов по тестам
+allure-results/
+allure-report/
+
+# Если используешь pytest кэш
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Можено добавить папку с загрузками, если она есть
+uploads/
