@@ -40,9 +40,9 @@
 Масштабируемость: Благодаря контейнеризации (Docker) система легко разворачивается на новых серверах при расширении штата.
 
 ## Стек технологий
-Язык: Python 3.11
+Язык: Python 3.13.3
 
-Бэкенд-фреймворк: Django 4.2
+Бэкенд-фреймворк: Django 6.0.2
 
 API: Django REST Framework (DRF)
 
@@ -79,14 +79,14 @@ API: Полностью функционирующий REST API.
 Требования
 Установленные Docker и Docker Compose (рекомендуемый способ)
 
-Или Python 3.11+ и Poetry/pip
+Или Python 3.13.3+ и Poetry/pip
 
 Запуск через Docker (рекомендуется)
 Клонируйте репозиторий
 
 sh
 git clone https://github.com/[ТВОЙ_НИК]/[ИМЯ_РЕПОЗИТОРИЯ].git
-cd [ИМЯ_РЕПОЗИТОРИЯ]
+cd TaskTracker
 Создайте файл с переменными окружения
 Создайте файл .env в корне проекта (можно скопировать .env.example).
 
@@ -130,32 +130,10 @@ docker-compose exec web python manage.py test
 ### Или через coverage для отчета
 coverage run manage.py test
 coverage report
-Текущие показатели:
 
-Покрытие кода: 85%
+Покрытие кода: 87%
 
-Количество тестов: [Укажи число, например: 47]
+Количество тестов: 9
 
-## Структура проекта
-text
-employee-task-tracker/
-├── .github/               # (Опционально) шаблоны для GitHub
-├── backend/                # Основная папка с Django проектом
-│   ├── api/                # Приложение API (DRF)
-│   │   ├── serializers.py  # Сериализаторы
-│   │   ├── views.py        # Контроллеры (ViewSets)
-│   │   └── urls.py         # Маршруты API
-│   ├── tasks/              # Приложение для моделей задач
-│   │   ├── models.py       # Модели (Task, Employee)
-│   │   └── admin.py        # Настройка админ-панели
-│   ├── core/               # Основные настройки Django
-│   │   ├── settings.py     # Настройки проекта
-│   │   └── urls.py         # Главный файл маршрутов
-│   └── manage.py
-├── docker-compose.yml      # Оркестрация контейнеров
-├── Dockerfile              # Инструкция для сборки образа
-├── .env.example            # Пример переменных окружения
-├── requirements.txt        # Зависимости Python
-└── README.md               # Этот файл
 ✍️ Автор
 Розова София — https://github.com/RozovaSophia
